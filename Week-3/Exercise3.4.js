@@ -22,6 +22,7 @@ stack.pop();// => 5
 stack.items;// => [10]
 stack.items= [10,100,1000];// Encapsulationbroken!
 
+// Solution Starts here
 
 const createStack2 = () => {
     let items = [];
