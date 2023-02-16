@@ -60,18 +60,17 @@ let stack = new Stack();
 
 function parenthesisChecker(exp) {
 
-    for(let i of exp) {
-        if (i === '(' || i === '{' | i === '[') {
-            stack.push(i);
+    [...exp].forEach(ele => {
+        if (ele === '(' || ele === '{' | ele === '[') {
+            stack.push(ele);
         }
         else {
-            if ((i === ')' && stack.peek() === '(' ) || (i === '}' && stack.peek() === '{' ) || (i === ']' && stack.peek() === '[' )) {
+            if ((ele === ')' && stack.peek() === '(' ) || (ele === '}' && stack.peek() === '{' ) || (ele === ']' && stack.peek() === '[' )) {
                 stack.pop();
             }
         }
-    }
+    });
     if(stack.isEmpty()) {
-        stack.emptyIt();
         return true;
     }
     else {
@@ -82,6 +81,6 @@ function parenthesisChecker(exp) {
 
 let cases = ["{([])}", "([]", "()", "[(])", "[()]{}{()()}"];
 
-for (let i of cases) {
-    console.log(`${i} - ${parenthesisChecker(i)}`);
-}
+cases.forEach((ith_case) => {
+    console.log(`${ith_case} - ${parenthesisChecker(ith_case)}`);
+});

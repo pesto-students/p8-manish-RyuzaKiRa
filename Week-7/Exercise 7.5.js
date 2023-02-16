@@ -61,13 +61,13 @@ class Stack {
 function nextGreaterElement(arr) {
     let result = [];
     let stack = new Stack();
-    for(let i of arr) {
+    arr.forEach(i => {
         while (!stack.isEmpty() && stack.peek() < i) {
             result.push(i);
             stack.pop();
         }
         stack.push(i);
-    }
+    });
     while (!stack.isEmpty()) {
         stack.pop();
         result.push(-1);
