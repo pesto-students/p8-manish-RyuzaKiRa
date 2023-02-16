@@ -34,6 +34,8 @@ function stockMarket(arr){
     }
     console.log(maxProfit);
 }
+//TC: O(n^2)
+//SC: O(1)
 
 function stockMarket2(arr){
     let maxProfit = 0;
@@ -48,6 +50,8 @@ function stockMarket2(arr){
     }
     console.log(maxProfit);
 }
+//TC: O(n)
+//SC: O(1)
 
 const prices = [7,1,5,3,6,4];
 const prices2 = [7,6,4,3,1];

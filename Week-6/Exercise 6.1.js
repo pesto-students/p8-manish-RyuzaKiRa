@@ -34,6 +34,8 @@ for (let i = 0; i < arr.length; i++) {
  }
  return maxSum;
 }
+//TC: O(n^2)
+//SC: O(1)
 
 
 // Efficient Approach
@@ -50,6 +52,8 @@ function maxArray1(arr){
     });
     return maxSum;
 }
+//TC: O(n)
+//SC: O(1)
 
 console.log(maxArray([1, 2, 3, 4, -10]));
 console.log(maxArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));

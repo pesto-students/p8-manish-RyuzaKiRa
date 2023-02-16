@@ -41,6 +41,8 @@ function spiralMatrix(matrix){
     }
     console.log(...spiral);
 }
+//TC: O(n^2)
+//SC: O(n)
 
 let arr = [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ];
 

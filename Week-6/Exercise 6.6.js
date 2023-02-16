@@ -35,5 +35,7 @@ function threeSum(arr,n){
 	}
     console.log(closeSum);
 }
+//TC: O(n^3)
+//SC: O(1)
 
 threeSum([-1, 2, 1, -4], 1);

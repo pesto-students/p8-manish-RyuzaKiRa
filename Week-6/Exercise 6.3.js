@@ -52,6 +52,8 @@ function sort_zero_one_two(arr) {
     console.log("Before Sort - ",arr);
     console.log("After Fort - ", arr_copy);
 }
+//TC: O(n)
+//SC: O(1) if arr_copy is not used
 
 function sort_zero_one_two_2(arr){
     let ptr1 = 0, ptr2 = 0, ptr3 = arr.length - 1;
@@ -71,6 +73,8 @@ function sort_zero_one_two_2(arr){
     }
     console.log("After Fort - ", arr);
 }
+//TC: O(n)
+//SC: O(1)
 
 const arr = [0, 2, 1, 2, 0];
 const arr2 = [0, 1, 0];

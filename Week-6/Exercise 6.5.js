@@ -41,6 +41,8 @@ function diff(arr, b){
     }
     return false
 }
+//TC: O(n)
+//SC: O(n) n because of storing sorted array.
 
 console.log(diff([5, 10, 3, 2, 50, 80], 78));
 console.log(diff([-10, 20], 30));
