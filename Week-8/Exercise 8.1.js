@@ -32,7 +32,7 @@ class Tree {
 }
 
 function createTree(arr, i) {
-    let tree = new Tree(arr);
+    let tree = new Tree();
     if (arr[i] == null) {
         return null;
     }

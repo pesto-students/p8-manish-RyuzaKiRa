@@ -7,8 +7,8 @@
  *  2. Everybody (except forthe town judge) trusts the town judge.
  *  3. There is exactly one person that satisfiesproperties 1 and 2.
  * 
- * You are given an array trust where trust[i] = [ai, bi] representing that the person labeledai trusts the person labeled
- * bi. Return the label of the town judge if the town judge existsand can be identified, or return -1 otherwise.
+ * You are given an array trust where trust[i] = [ai, bi] representing that the person labeled 'ai' trusts the person
+ * labeled bi. Return the label of the town judge if the town judge existsand can be identified, or return -1 otherwise.
  * 
  * Example 1:
  * Input: n = 2, trust = [[1,2]]
@@ -30,3 +30,31 @@
  *  ●ai != bi
  *  ●1 <= ai, bi <= n
  */
+
+/* Solution */
+
+const findJudge = function(n, trust) {
+    let result = -1;
+    if (trust.length === 0 && n >1) {
+        return -1;
+    }
+    if (trust.length === 0) {
+        return 1;
+    }
+    let trusts = new Array(n+1).fill(0);
+    let isTrusted = new Array(n+1).fill(0);
+    trust.forEach(t => {
+        trusts[t[0]]++;
+        isTrusted[t[1]]++;
+    });
+    for (let i = 0; i <= n; i++) {
+        
+        if (isTrusted[i] === n-1 && trusts[i] === 0) {
+            result = i;
+            break;
+        }
+    };
+    return result;
+};
+
+console.log(findJudge(4, []));
