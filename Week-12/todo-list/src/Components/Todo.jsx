@@ -14,6 +14,7 @@ const Todo = () => {
         setList([...newList]);
     }
     const updateItem = (index, value) => {
+        console.log(`Debounced list updated call with value: ${value}`);
         let updatedList = list;
         updatedList[index] = value;
         setList([...updatedList]);
@@ -33,7 +34,7 @@ const Todo = () => {
                         )
                     })
                 }
-                <button onClick={addItem}>Add</button>
+                <button className="AddButton" onClick={addItem}>Add</button>
             </div>
             <div>
             </div>

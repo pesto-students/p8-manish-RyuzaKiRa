@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
+import debounce from 'lodash/debounce';
 import '../Style/Todo.css';
 
 const ListItem = (props) => {
     const [itemName, setName] = useState('');
     const [checkValue, setCheckValue] = useState(false);
     const rendered = useRef(false);
+    const debouncedUpdate = useRef(debounce(props.updateItem, 1000));
     const handleClick = (event) => {
-        props.updateItem(props.index, event.target.value);
+        setName(event.target.value);
+        debouncedUpdate.current(props.index, event.target.value);
     }
     const handleCheck = () => {
         setCheckValue(true);
