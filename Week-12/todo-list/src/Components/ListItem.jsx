@@ -22,7 +22,7 @@ const ListItem = (props) => {
             return;
         rendered.current = true;
         setName(props.name);
-    },[]);
+    },[props.name]);
     return (
         <>
             <div className="flexOnly">

@@ -6,16 +6,18 @@ const Todo = () => {
 
     const [list, setList] = useState(['Coding', 'Eating', 'Sleeping', 'Debugging']);
     const addItem = () => {
-        setList([...list, '']);
+        const newList = [...list];
+        newList.push('');
+        setList([...newList]);
     }
     const removeItem = (index) => {
-        let newList = list;
+        const newList = [...list];
         newList.splice(index, 1);
         setList([...newList]);
     }
     const updateItem = (index, value) => {
         console.log(`Debounced list updated call with value: ${value}`);
-        let updatedList = list;
+        const updatedList = [...list];
         updatedList[index] = value;
         setList([...updatedList]);
     }
@@ -34,7 +36,7 @@ const Todo = () => {
                         )
                     })
                 }
-                <button className="AddButton" onClick={addItem}>Add</button>
+                <button className="addButton" onClick={addItem}>Add</button>
             </div>
             <div>
             </div>
