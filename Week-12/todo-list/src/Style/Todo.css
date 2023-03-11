@@ -1,0 +1,27 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.flexOnly{
+    display: flex;
+}
+
+.rowCenter{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.smallHeight{
+    height: 30px;
+    display: flex;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.noBorder{
+    border: 0;
+}
