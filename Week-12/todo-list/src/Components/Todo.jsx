@@ -8,18 +8,17 @@ const Todo = () => {
     const addItem = () => {
         const newList = [...list];
         newList.push('');
-        setList([...newList]);
+        setList(newList);
     }
     const removeItem = (index) => {
         const newList = [...list];
         newList.splice(index, 1);
-        setList([...newList]);
+        setList(newList);
     }
     const updateItem = (index, value) => {
-        console.log(`Debounced list updated call with value: ${value}`);
         const updatedList = [...list];
         updatedList[index] = value;
-        setList([...updatedList]);
+        setList(updatedList);
     }
     return (
         <>

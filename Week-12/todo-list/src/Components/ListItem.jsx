@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import debounce from 'lodash/debounce';
+import React, { useState } from "react";
 import '../Style/Todo.css';
 
 const ListItem = (props) => {
-    const [itemName, setName] = useState('');
     const [checkValue, setCheckValue] = useState(false);
-    const rendered = useRef(false);
-    const debouncedUpdate = useRef(debounce(props.updateItem, 1000));
-    const handleClick = (event) => {
-        setName(event.target.value);
-        debouncedUpdate.current(props.index, event.target.value);
+    const handleChange = (event) => {
+        props.updateItem(props.index, event.target.value);
     }
     const handleCheck = () => {
         setCheckValue(true);
@@ -17,12 +12,6 @@ const ListItem = (props) => {
             props.removeItem(props.index);
         }, 200);
     }
-    useEffect(() => {
-        if (rendered.current)
-            return;
-        rendered.current = true;
-        setName(props.name);
-    },[props.name]);
     return (
         <>
             <div className="flexOnly">
@@ -30,9 +19,9 @@ const ListItem = (props) => {
                 <input className="noBorder"
                     autoFocus={true}
                     type="text"
-                    value={itemName}
+                    value={props.name}
                     placeholder="Item Name"
-                    onChange={handleClick}
+                    onChange={handleChange}
                 />
             </div>
         </>
