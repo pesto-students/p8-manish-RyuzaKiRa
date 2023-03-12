@@ -12,10 +12,10 @@ const ShortenUrl = (props) => {
             return null;
     return (
         <>
-            <div className="urlBox_2">
-                    <a href={props.shortUrl}>{props.shortUrl}</a>
-                </div>
-                <button className="copyButton" onClick={onCopy}>{copy}</button>
+            <div className="shortenedUrlBox">
+                    <p>{props.shortUrl}</p>
+            </div>
+            <button className="copyButton" onClick={onCopy}>{copy}</button>
         </>
     );
 };

@@ -1,110 +1,157 @@
 html {
   height: 100%;
-  background: -webkit-linear-gradient(
-      to right,
+  background: -webkit-linear-gradient(to right,
       rgba(126, 64, 246, 1),
-      rgba(80, 139, 252, 1)
-    );
+      rgba(80, 139, 252, 1));
 
-    background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba(126, 64, 246, 1),
-      rgba(80, 139, 252, 1)
-    );
+      rgba(80, 139, 252, 1));
 }
-  
+
 div.app {
   height: 100%;
   background-color: cornsilk;
 }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-}
-.flexOnly{
-    display: flex;
+.flex {
+  display: flex;
+  flex-direction: column;
 }
 
-.rowCenter{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+.flexOnly {
+  display: flex;
 }
 
-.smallHeight{
-    height: 30px;
-    display: flex;
+.rowCenter {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.smallHeight {
+  height: 30px;
+  display: flex;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.noBorder{
-    border: 0;
+.noBorder {
+  border: 0;
 }
 
-.gradient-custom-2 {
-
-  background: linear-gradient(
-    to right,
-    rgba(126, 64, 246, 1),
-    rgba(80, 139, 252, 1)
-  );
-}
-  
-.mask-custom {
+.customShortUrlBody {
   background: rgba(24, 24, 16, 0.2);
   border-radius: 2em;
   backdrop-filter: blur(25px);
   border: 2px solid rgba(255, 255, 255, 0.05);
   background-clip: padding-box;
   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
-  margin: auto 65vh;
+  margin: auto 18%;
   margin-top: 25vh;
   margin-bottom: -30px;
   padding: 5vh;
 }
 
+.customContactUsBody {
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  margin: auto 30%;
+  margin-top: 15vh;
+  margin-bottom: -30px;
+  padding: 5vh;
+}
+
 .shortButton {
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    padding: 14px 30px;
-    border-radius: 5px;
-    margin: 10px 5px;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 5px;
+  cursor: pointer;
+  width: 20%;
+  height: 8vh;
+}
+
+.shortButton:active {
+  font-size: 18px;
 }
 
 .copyButton {
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 43px;
-    padding-right: 43px;
-    border-radius: 5px;
-    margin: 10px 6px;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 43px;
+  padding-right: 43px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 6px;
+  cursor: pointer;
+  width: 20%;
+  height: 8vh;
+}
+
+.copyButton:active {
+  font-size: 18px;
 }
 
 .urlBox {
-    border-radius: 20px;
-    height: 7vh;
-    width: 35vh;
-    font-size: 20px;
-    padding-left: 15px;
+  border-radius: 12px;
+  border: none;
+  height: 7vh;
+  width: 70%;
+  font-size: 20px;
+  padding-left: 15px;
 }
-.urlBox_2 {
-    border-radius: 20px;
-    height: 7vh;
-    width: 35vh;
-    font-size: 20px;
-    padding-left: 15px;
-    background-color: white;
-    padding-top: 9px;
+
+.shortenedUrlBox {
+  border-radius: 12px;
+  border: none;
+  height: 6vh;
+  width: 70%;
+  font-size: 20px;
+  padding-left: 15px;
+  background-color: white;
+  padding-top: 9px;
+}
+
+.shortenedUrlBox p {
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+.shortHeader {
+  margin-left: 25px;
+}
+
+.inValidUrl {
+  color: red;
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
