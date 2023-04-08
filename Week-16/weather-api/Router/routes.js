@@ -85,13 +85,13 @@ router.get('/forecast', async (req, res) => {
         url: `${BASE_URL}/${apiType.forecast}?key=${process.env.SECRET_KEY}&q=${req.query.place}&${days}&${req.query.hour ? hour : ''}`
     })
         .then((response) => {
-            return response;
+            return response.data;
         })
         // Catching and returning error message if the specified params are invalid.
         .catch((error) => {
-            return error.response;
+            return error.response.data;
         });
-    return res.send(response.data);
+    return res.send(response);
 });
 
 // Endpoint for returning weather data based on the date provided, it can either be in past or future.
@@ -119,13 +119,13 @@ router.get('/weather', async (req, res) => {
         url: `${BASE_URL}/${new Date() > new Date(req.query.dt) ? apiType.history : apiType.future}?key=${process.env.SECRET_KEY}&q=${req.query.place}&${date}&${req.query.hour ? hour : ''}`
     })
         .then((response) => {
-            return response;
+            return response.data;
         })
         // Catching and returning error message if the specified params are invalid.
         .catch((error) => {
-            return error.response;
+            return error.response.data;
         });
-    return res.send(response.data);
+    return res.send(response);
 });
 
 module.exports = router;
