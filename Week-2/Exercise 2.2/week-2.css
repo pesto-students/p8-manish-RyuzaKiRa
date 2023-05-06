@@ -1,0 +1,69 @@
+
+h2 {
+  position: absolute;
+  left: 182px;
+  top: 68px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.main {
+  position: absolute;
+  top: 150px;
+  left: 450px;
+  height: 200px;
+  width: 300px;
+}
+
+.main:hover #box1 {
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.main:hover #box2 {
+  left: 300px;
+  transform: rotate(-90deg);
+}
+
+.main:hover #box3 {
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.main:hover #box4 {
+  left: 300px;
+  transform: rotate(90deg);
+}
+
+#box1 {
+  position: absolute;
+  left: 100px;
+  background-color: red;
+  transition: all 1s ease;
+}
+
+#box2 {
+  position: absolute;
+  left: 200px;
+  background-color: yellow;
+  transition: all 1s ease;
+}
+
+#box3 {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: blue;
+  transition: all 1s ease;
+}
+
+#box4 {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  background-color: green;
+  transition: all 1s ease;
+}

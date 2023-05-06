@@ -1,0 +1,14 @@
+{
+  "name": "week-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Exercise 5.1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
